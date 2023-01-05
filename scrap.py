@@ -5,7 +5,6 @@ from typing import List
 from bs4 import BeautifulSoup
 
 
-# Scraping The kathmandu Post
 def perform_scraping(url: str) -> List[str]:
     html_text = requests.get(url).text
     soup = BeautifulSoup(html_text, features="lxml")
