@@ -28,7 +28,7 @@ def perform_scraping(url: str) -> List[str]:
 
 def main():
     banks = perform_scraping("https://www.econtext.jp/bank_list/list.html")
-    banks_dict = {"banks": banks}
+    banks_dict = {"count": len(banks), "banks": banks}
     # Convering dict --> json
     banks_json = json.dumps(banks_dict, indent=4, ensure_ascii=False)
 
